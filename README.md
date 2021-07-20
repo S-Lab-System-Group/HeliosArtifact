@@ -1,5 +1,5 @@
 # Artifact for SC '21
-
+[![DOI](https://zenodo.org/badge/387809469.svg)](https://zenodo.org/badge/latestdoi/387809469)
 
 This repository contains the artifact for the SC '21 paper "*Characterization and Prediction of Deep LearningWorkloads in Large-Scale GPU Datacenters*". It includes following four parts:
 
