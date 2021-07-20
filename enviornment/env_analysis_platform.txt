@@ -1,0 +1,218 @@
++ inxi -F -c0
+System:    Host: tony-PC Kernel: 5.8.0-53-generic x86_64 bits: 64 Console: N/A Distro: Ubuntu 20.04.2 LTS (Focal Fossa) 
+Machine:   Type: Desktop System: Dell product: Precision 3640 Tower v: N/A serial: <superuser/root required> 
+           Mobo: Dell model: 0D4MD1 v: A00 serial: <superuser/root required> UEFI: Dell v: 1.4.3 date: 01/05/2021 
+CPU:       Topology: 10-Core model: Intel Core i9-10900 bits: 64 type: MT MCP L2 cache: 20.0 MiB 
+           Speed: 800 MHz min/max: 800/5200 MHz Core speeds (MHz): 1: 800 2: 800 3: 800 4: 800 5: 800 6: 800 7: 800 8: 800 
+           9: 800 10: 800 11: 800 12: 800 13: 800 14: 800 15: 800 16: 800 17: 800 18: 800 19: 800 20: 800 
+Graphics:  Device-1: Intel driver: i915 v: kernel 
+           Device-2: NVIDIA TU102 [GeForce RTX 2080 Ti Rev. A] driver: nvidia v: 460.32.03 
+           Display: server: X.org 1.20.9 driver: modesetting,nvidia unloaded: fbdev,nouveau,vesa tty: 226x13 
+           Message: Advanced graphics data unavailable in console. Try -G --display 
+Audio:     Device-1: Intel Comet Lake PCH cAVS driver: snd_hda_intel 
+           Device-2: NVIDIA TU102 High Definition Audio driver: snd_hda_intel 
+           Sound Server: ALSA v: k5.8.0-53-generic 
+Network:   Device-1: Intel Ethernet I219-LM driver: e1000e 
+           IF: eno1 state: up speed: 1000 Mbps duplex: full mac: a4:bb:6d:50:4d:b8 
+           IF-ID-1: vmnet1 state: unknown speed: N/A duplex: N/A mac: 00:50:56:c0:00:01 
+           IF-ID-2: vmnet8 state: unknown speed: N/A duplex: N/A mac: 00:50:56:c0:00:08 
+Drives:    Local Storage: total: 4.10 TiB used: 115.88 GiB (2.8%) 
+           ID-1: /dev/nvme0n1 vendor: SK Hynix model: PC611 NVMe 512GB size: 476.94 GiB 
+           ID-2: /dev/sda vendor: HGST (Hitachi) model: HUS726T4TALA6L0 size: 3.64 TiB 
+Partition: ID-1: / size: 467.96 GiB used: 115.84 GiB (24.8%) fs: ext4 dev: /dev/nvme0n1p2 
+Sensors:   System Temperatures: cpu: 30.0 C mobo: N/A 
+           Fan Speeds (RPM): cpu: 512 fan-2: 993 fan-3: 899 
+Info:      Processes: 463 Uptime: 4d 20h 55m Memory: 31.08 GiB used: 5.27 GiB (17.0%) Init: systemd runlevel: 5 Shell: zsh 
+           inxi: 3.0.38 
++ nvidia-smi
+Sun May 30 15:30:04 2021       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 460.32.03    Driver Version: 460.32.03    CUDA Version: 11.2     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  GeForce RTX 208...  On   | 00000000:01:00.0 Off |                  N/A |
+| 18%   34C    P8    20W / 250W |    408MiB / 11011MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|    0   N/A  N/A      1276      G   /usr/lib/xorg/Xorg                 59MiB |
+|    0   N/A  N/A      1865      G   /usr/lib/xorg/Xorg                168MiB |
+|    0   N/A  N/A      2088      G   /usr/bin/gnome-shell               17MiB |
+|    0   N/A  N/A     69214      G   ...lib/vmware/bin/vmware-vmx      146MiB |
++-----------------------------------------------------------------------------+
++ pip list
+Package                  Version
+------------------------ -------------------
+absl-py                  0.12.0
+aiohttp                  3.7.4.post0
+aiohttp-cors             0.7.0
+aioredis                 1.3.1
+anyio                    2.2.0
+argon2-cffi              20.1.0
+astroid                  2.5.6
+astunparse               1.6.3
+async-generator          1.10
+async-timeout            3.0.1
+attrs                    21.2.0
+autopep8                 1.5.7
+Babel                    2.9.1
+backcall                 0.2.0
+bleach                   3.3.0
+blessings                1.7
+brotlipy                 0.7.0
+cachetools               4.2.2
+certifi                  2020.12.5
+cffi                     1.14.5
+chardet                  4.0.0
+chinesecalendar          1.5.0
+ciso8601                 2.1.3
+click                    8.0.0
+colorama                 0.4.4
+conda                    4.10.1
+conda-package-handling   1.7.3
+cryptography             3.4.7
+cycler                   0.10.0
+decorator                5.0.9
+defusedxml               0.7.1
+entrypoints              0.3
+filelock                 3.0.12
+flatbuffers              1.12
+gast                     0.4.0
+google-api-core          1.26.3
+google-auth              1.30.0
+google-auth-oauthlib     0.4.4
+google-pasta             0.2.0
+googleapis-common-protos 1.53.0
+gpustat                  0.6.0
+grpcio                   1.34.1
+h5py                     3.1.0
+hiredis                  2.0.0
+idna                     2.10
+importlib-metadata       3.10.0
+ipykernel                5.3.4
+ipython                  7.22.0
+ipython-genutils         0.2.0
+isort                    5.8.0
+jedi                     0.17.0
+Jinja2                   3.0.0
+joblib                   1.0.1
+json5                    0.9.5
+jsonschema               3.2.0
+jupyter-client           6.1.12
+jupyter-core             4.7.1
+jupyter-kite             2.0.2
+jupyter-packaging        0.7.12
+jupyter-server           1.4.1
+jupyterlab               3.0.14
+jupyterlab-kite          2.0.2
+jupyterlab-pygments      0.1.2
+jupyterlab-server        2.4.0
+keras-nightly            2.5.0.dev2021032900
+Keras-Preprocessing      1.1.2
+kiwisolver               1.3.1
+lazy-object-proxy        1.6.0
+lightgbm                 3.2.1
+Markdown                 3.3.4
+MarkupSafe               2.0.1
+matplotlib               3.3.4
+mccabe                   0.6.1
+mistune                  0.8.4
+mkl-fft                  1.3.0
+mkl-random               1.2.1
+mkl-service              2.3.0
+msgpack                  1.0.2
+multidict                5.1.0
+nbclassic                0.2.6
+nbclient                 0.5.3
+nbconvert                6.0.7
+nbformat                 5.1.3
+nest-asyncio             1.5.1
+notebook                 6.4.0
+numpy                    1.20.2
+nvidia-ml-py3            7.352.0
+oauthlib                 3.1.0
+olefile                  0.46
+opencensus               0.7.13
+opencensus-context       0.1.2
+opt-einsum               3.3.0
+packaging                20.9
+pandas                   1.2.4
+pandocfilters            1.4.3
+parso                    0.8.2
+patsy                    0.5.1
+pexpect                  4.8.0
+pickleshare              0.7.5
+Pillow                   8.2.0
+pip                      21.1.1
+prometheus-client        0.10.1
+prompt-toolkit           3.0.17
+protobuf                 3.17.0
+psutil                   5.8.0
+ptyprocess               0.7.0
+py-spy                   0.3.6
+pyasn1                   0.4.8
+pyasn1-modules           0.2.8
+pycodestyle              2.7.0
+pycosat                  0.6.3
+pycparser                2.20
+Pygments                 2.9.0
+pylint                   2.8.2
+pyOpenSSL                20.0.1
+pyparsing                2.4.7
+pyrsistent               0.17.3
+PySocks                  1.7.1
+python-dateutil          2.8.1
+pytz                     2021.1
+PyYAML                   5.4.1
+pyzmq                    20.0.0
+ray                      1.3.0
+redis                    3.5.3
+requests                 2.25.1
+requests-oauthlib        1.3.0
+rsa                      4.7.2
+ruamel-yaml-conda        0.15.100
+scikit-learn             0.24.2
+scipy                    1.6.3
+seaborn                  0.11.1
+Send2Trash               1.5.0
+setuptools               52.0.0.post20210125
+sip                      4.19.13
+six                      1.15.0
+sniffio                  1.2.0
+statsmodels              0.12.2
+tabulate                 0.8.9
+tensorboard              2.5.0
+tensorboard-data-server  0.6.1
+tensorboard-plugin-wit   1.8.0
+tensorboardX             2.2
+tensorflow               2.5.0
+tensorflow-estimator     2.5.0
+termcolor                1.1.0
+terminado                0.9.4
+testpath                 0.4.4
+threadpoolctl            2.1.0
+toml                     0.10.2
+torch                    1.8.1
+torchaudio               0.8.0a0+e4e171a
+torchvision              0.9.1
+tornado                  6.1
+tqdm                     4.59.0
+traitlets                5.0.5
+typing-extensions        3.7.4.3
+urllib3                  1.26.4
+wcwidth                  0.2.5
+webencodings             0.5.1
+Werkzeug                 2.0.0
+wheel                    0.36.2
+wrapt                    1.12.1
+xgboost                  1.4.2
+yarl                     1.6.3
+zipp                     3.4.1
