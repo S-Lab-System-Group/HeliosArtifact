@@ -11,9 +11,7 @@ This repository contains the artifact for the SC '21 paper "*Characterization an
 
 + `framework`: It contains `QSSF Service` and `CES Service` scripts
 
-
-
-> **Note that only the `Venus` trace is public available now. Other traces are being censored. We will release them as soon as possible.**
+> **We have update notebooks and scripts for full four traces!**
 
 ## Detailed Introduction
 
@@ -55,8 +53,6 @@ Initially, this folder is ***NOT exist***. You need to download and unzip the da
  ┃ ┣ 📜cluster_gpu_number.csv
  ┃ ┗ 📜cluster_log.csv
 ```
-
-> **Note that only the `Venus` trace is public available now.**
 
 
 ### `analysis`
@@ -103,7 +99,7 @@ Here are the ***step-by-step*** instructions for artifact.
     cd HeliosArtifact
 
     git clone git@github.com:S-Lab-System-Group/HeliosData.git
-    mv ./HeliosData/data ./
+    unzip ./HeliosData/data.zip -d ./
     ```
 
 2. Check software dependencies:
@@ -118,13 +114,13 @@ Here are the ***step-by-step*** instructions for artifact.
 3.  Prepare and parse the trace files for analyzing.
     ```bash
     cd analysis
-    python ./trace_parser.py --cluster-list 'Venus'
+    python ./trace_parser.py
     ```
 4.  After generating all required data, you can analyze traces through `.ipynb` files within 4 sub-folders of `analysis`:**1_compare with Philly trace**, **2_cluster characterization**, **3_job characterization**, **4_user characterization**.
 
     These Jupyter Notebook scripts are used for generating figures of the trace analysis part of the paper.
 
-> **Note that only the `Venus` trace is public available now. Thus, some generated figures are incomplete comparing with the paper version.**
+
 
 
 ### Reproducing `framework`
